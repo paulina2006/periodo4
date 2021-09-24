@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head onkeypress="teclado()">
+	<title>Trabajo</title>
+</head>
+<body  onmousemove="position(event)" onMousedown="cli(event)" > 
+	<style>
+
+#mousePositions{
+	border:solid #000000 0px;
+	color:#000000;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:41px;
+	height:300px;
+	overflow:auto;
+	width:150px;
+    align-content: center;
+
+}
+.cuadro{
+	position: absolute;
+	width: 35%;
+	height: 40%;
+	top: 12%;
+	left: 33%;
+	background-color:white;
+ 	border: black 2px solid;
+}
+.cuadro2{
+	position: absolute;
+	width: 35%;
+	height: 40%;
+	top: 12%;
+	left: 33%;
+	background:lightpink;
+  	border: black 5px solid;
+}
+.cuadro3{
+	position: absolute;
+	width: 35%;
+	height: 40%;
+	top: 12%;
+	left: 33%;
+	background:#DA93FE;
+	border: black 5px solid;
+}
+.cuadro4{
+	position: absolute;
+	width: 35%;
+	height: 40%;
+	top: 12%;
+	left: 33%;
+	background:lightsalmon;
+	border: black 5px solid;
+}
+
+</style>
+	<input type="button" name="btt" value="Neosistemas" style="position: absolute; width: 200px; height: 50px; top: 40px; left: 45%; font-size: 20px;" onclick="trabajo()" >
+	<div style="position: absolute; width: 600px; height: 300px; background-color: pink; top: 35%; left: 30%;">
+		<center>
+		<div style="position: absolute; top: 15px; left:5%; display: none;" id="logo" >
+			<img src="img1.jpeg">
+		</div>
+	<div id="mousePositions" style="top: 200px; display: none;" ></div>
+<div class="cuadro" id="cuadro"></div></center>
+	</div>
+	<input type="button" name="btt1" value="Ejercicio 1" style="position: absolute; width: 200px; height: 50px; top: 40%; left: 5%; font-size: 20px; display: none;" onclick="trabaj()" id="btt1" >
+	<input type="button" name="btt2" value="Ejercicio 2" style="position: absolute; width: 200px; height: 50px; top: 60%; left: 5%; font-size: 20px; display: none;" onclick="traba()" id="btt2">
+	<script >
+		function trabajo() {
+			div = document.getElementById('btt1');
+            div.style.display = 'block';
+            div1 = document.getElementById('btt2');
+            div1.style.display = 'block';
+            div2 = document.getElementById('logo');
+            div2.style.display = 'block';
+            x=0;
+		 function mostrar(){
+		 x=x+1;
+		
+		 	if (x==10) 
+		 	{
+		 		clearInterval(crono);
+		 				 	}
+		 
+      crono=setInterval(mostrar,1000);
+      div2 = document.getElementById('logo');
+            div2.style.display = 'none';
+}
+		}
+		function trabaj() {
+			div2 = document.getElementById('logo');
+            div2.style.display = 'none';
+            div2 = document.getElementById('mousePositions');
+            div2.style.display = 'block';
+
+		}
+		 function position(event){
+
+	var x = event.clientX;
+
+	var y = event.clientY;
+
+	var mousePositions = document.getElementById('mousePositions');
+
+	mousePositions.innerHTML = 'X: '+x+', Y: '+y;
+}
+function traba() {
+	div2 = document.getElementById('logo');
+            div2.style.display = 'none';
+            div2 = document.getElementById('mousePositions');
+            div2.style.display = 'none';
+            div2 = document.getElementById('logo1');
+            div2.style.display = 'block';
+}
+function teclado()
+		{
+			if(event.code=="KeyA")
+			{
+				var cuadroe=document.getElementById("cuadro");
+				cuadro.className="cuadro2";
+			}
+			else
+			{}
+			if(event.code=="KeyB")
+			{
+				var cuadroe=document.getElementById("cuadro");
+				cuadro.className="cuadro3";
+			}
+			else
+			{}
+			if(event.code=="KeyC")
+			{
+				var cuadroe=document.getElementById("cuadro");
+				cuadro.className="cuadro4";
+			}
+		}
+		 
+	</script>
+
+</body>
+</html>
